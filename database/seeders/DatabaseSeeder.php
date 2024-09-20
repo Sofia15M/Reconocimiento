@@ -26,16 +26,11 @@ class DatabaseSeeder extends Seeder
  /**
          * Seeder for roles and permissions.
          */
-        
+
         $user = Role::create(['name' => 'user']);
-        
-    
-        User::create([
-            'name'=>'Usuario Ximena',
-            'email'=>'usuario@example.com',
-            'password'=>Hash::make('12345678')
-        ])->assignRole('user');
-    
+
+
+
 
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <h1>Listado de usuarios</h1>
+        <h1>Listado de estudiantes</h1>
     </div>
     <hr>
     <div class="row">
@@ -10,7 +10,7 @@
                 <div class="card-header">
 
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <a href="{{ url('admin/users/usersIndex') }}" class="btn bg-secondary active" > 
+                        <a href="{{ url('admin/users/usersIndex') }}" class="btn bg-secondary active" >
                             <input type="radio" name="options" id="option_b1" autocomplete="off">Activos
                         </a>
                         <a href="{{ url('admin/users/showInactiveUsers') }}" class="btn bg-secondary">
@@ -30,9 +30,11 @@
                     <table class="table table-dark table-striped table-hover table-sm text-center">
                         <thead>
                             <tr>
-                                <th scope="col">Id</th>
+                                <th scope="col">N.Documento</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Correo</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Grado</th>
+                                <th scope="col">Dieta</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -40,9 +42,11 @@
                             @foreach ($users as $user)
                                 @if ($user['status'] !== 'activo')
                                     <tr>
-                                        <td>{{ $user->id }}</td>
+                                        <td>{{ $user->studentId }}</td>
                                         <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->age }}</td>
+                                        <td>{{ $user->grade }}</td>
+                                        <td>{{ $user->diet }}</td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                 <a href="{{ url('admin/users/' . $user->id.'/confirmActivateUser') }}" type="button"

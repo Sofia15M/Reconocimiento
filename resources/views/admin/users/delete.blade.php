@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <h1>Usuario: {{ $user->name }}</h1>
+        <h1>Estudiante: {{ $user->name }}</h1>
     </div>
     <hr>
 
@@ -19,26 +19,27 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label for="">N.Documento:</label>
+                                    <input type="number" value="{{$user->studentId}}" name="studentId" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="">Nombre:</label>
                                     <input type="text" value="{{$user->name}}" name="name" class="form-control" disabled>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="">Correo:</label>
-                                    <input type="email" value="{{$user->email}}" name="email" class="form-control" disabled>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <a href="{{ url('admin/users/usersIndex') }}" class="btn btn-secondary">Cancelar</a>
-                                    <button type="submit" class="btn btn-danger">Eliminar usuario</button>
+                                    <button type="submit" class="btn btn-danger">Eliminar estudiante</button>
                                 </div>
                             </div>
                         </div>

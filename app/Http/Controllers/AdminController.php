@@ -52,22 +52,27 @@ class AdminController extends Controller
     public function storeUser(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:50',
-            'email' => 'required|max:50|unique:users',
-            'password' => 'required|min:8|max:20|confirmed',
+            'name' => 'required|max:30',
+            'studentId' => 'required|max:15|unique:users',
+            'age' => 'required|integer|min:5|max:14',
+            'diet' => 'required|min:8|max:40',
+            'grade' => 'required',
         ]);
 
         $user = new User();
         $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request['password']);
+        $user->studentId = $request->studentId;
+        $user->age = $request->age;
+        $user->grade = $request->grade;
+        $user->diet = $request->diet;
+
         $user->save();
 
         //Assign the 'user' role to the newly created user
         $user->assignRole('user');
 
         return redirect()->route('admin.users.usersIndex')
-            ->with('message_status', 'Usuario registrado exitosamente')
+            ->with('message_status', 'Estudiante registrado exitosamente')
             ->with('icon', 'success');
     }
 
@@ -91,7 +96,7 @@ class AdminController extends Controller
         $user->save();
 
         return redirect()->route('admin.users.usersIndex')
-            ->with('message_status', 'Usuario eliminado exitosamente')
+            ->with('message_status', 'Estudiante eliminado exitosamente')
             ->with('icon', 'success');
     }
 
@@ -124,7 +129,7 @@ class AdminController extends Controller
         $user->save();
 
         return redirect()->route('admin.users.usersIndex')
-            ->with('message_status', 'Usuario activado exitosamente')
+            ->with('message_status', 'Estudiante activado exitosamente')
             ->with('icon', 'success');
     }
 

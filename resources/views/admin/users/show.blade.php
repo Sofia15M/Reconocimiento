@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <h1>Usuario: {{$user->name}}</h1>
+        <h1>Estudiante: {{$user->name}}</h1>
     </div>
     <hr>
 
@@ -27,11 +27,21 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Correo:</label>
-                                    <p>{{$user->email}}</p>
+                                    <label for="">N.Documento:</label>
+                                    <p>{{$user->studentId}}</p>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Dieta:</label>
+                                    <p>{{$user->diet}}</p>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="row">
                             <div class="col-md-12">

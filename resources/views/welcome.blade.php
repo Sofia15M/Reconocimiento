@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.91.2">
-    <title>FaceTrack</title>
+    <title>Loncheras FaceID</title>
 
     <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -568,7 +568,7 @@
 
                     <div class="container" >
                         <div class="carousel-caption text-start">
-                            <h1 font-size: 50px>FaceTrack</h1>
+                            <h1 font-size: 50px>Loncheras FaceID</h1>
                             <p, style="font-size: 25px">Registrate ya en nuestra app de Reconocimiento Facial.
                             </p>
                             <p><a class="btn btn-lg btn-primary" href="{{url('/admin')}}" style="font-family:Georgia, 'Times New Roman', Times, serif">Registrarse</a></p>
@@ -593,16 +593,16 @@
                     <img src="{{ asset('images/FACETRACK.jpg') }}" class="bd-placeholder-img rounded-circle" width="200" height="200" alt="Descripción de la imagen">
                         <title>Placeholder</title>
                     </svg>
-                    <h2>¿Qué es FaceTrack?</h2>
-                    <p>FaceTrack es una tecnología avanzada de reconocimiento facial que permite detectar, seguir y analizar rostros 
+                    <h2>¿Qué es Loncheras FaceID?</h2>
+                    <p>Loncheras FaceID es una tecnología avanzada de reconocimiento facial que permite detectar, seguir y analizar rostros
                         en tiempo real con gran precisión. Ideal para aplicaciones de seguridad y monitoreo, garantiza un rastreo fluido incluso en entornos dinámicos.</p>
                 </div>
                 <div class="col-lg-4">
                         <img src="{{ asset('images/usuarioa.jpg') }}" class="bd-placeholder-img rounded-circle" width="200" height="200" alt="Descripción de la imagen">
                         <title>Placeholder</title>
-                       
+
                     <h2>Inf. Registro</h2>
-                    <p>Para garantizar el correcto funcionamiento de nuestro sistema y asegurar tu satisfacción, es fundamental que completes el registro con 
+                    <p>Para garantizar el correcto funcionamiento de nuestro sistema y asegurar tu satisfacción, es fundamental que completes el registro con
                         la información solicitada.<br> De esta manera, todo operará de forma óptima y sin inconvenientes.</p>
                 </div>
             </div>

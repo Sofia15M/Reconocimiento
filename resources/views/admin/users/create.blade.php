@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <h1>Registro de usuario</h1>
+        <h1>Registro de estudiante</h1>
     </div>
     <hr>
 
@@ -15,6 +15,19 @@
                 <div class="card-body">
                     <form action="{{url('/admin/users/storeUser')}}" method="POST">
                         @csrf
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">N.Documento</label><b>*</b>
+                                    <input type="number" value="{{old('studentId')}}" name="studentId" class="form-control" minlength="4" maxlength="20" required>
+                                    @error('number')
+                                    <small style="color:red">{{$message}}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -30,9 +43,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Correo</label><b>*</b>
-                                    <input type="email" value="{{old('email')}}" name="email" class="form-control" maxlength="50" required>
-                                    @error('email')
+                                    <label for="">Edad</label><b>*</b>
+                                    <input type="int" value="{{old('age')}}" name="age" class="form-control" maxlength="50" required>
+                                    @error('age')
                                     <small style="color:red">{{$message}}</small>
                                     @enderror
                                 </div>
@@ -42,26 +55,37 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Contraseña</label><b>*</b>
-                                    <input type="password" name="password" class="form-control" minlength="4" maxlength="20" required>
-                                    @error('password')
+                                    <label for="grade">Grado</label><b>*</b>
+                                    <select name="grade" class="form-control" required>
+                                        <option value="" disabled selected>Seleccione el grado</option>
+                                        <option value="Primero">Primero</option>
+                                        <option value="Segundo">Segundo</option>
+                                        <option value="Tercero">Tercero</option>
+                                        <option value="Cuarto">Cuarto</option>
+                                        <option value="Quinto">Quinto</option>
+                                    </select>
+                                    @error('grade')
                                     <small style="color:red">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Verificar contraseña</label><b>*</b>
-                                    <input type="password" name="password_confirmation" class="form-control" minlength="4" maxlength="20" required>
-                                    @error('password_confirmation')
+                                    <label for="">Dieta</label><b>*</b>
+                                    <input type="text" value="{{old('diet')}}" name="diet" class="form-control" minlength="10" maxlength="40" pattern="[A-Za-z\s]+" title="Solo se permiten letras" required>
+                                    @error('diet')
                                     <small style="color:red">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
                         </div>
+
+
+
 
 
                         <div class="row">

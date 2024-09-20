@@ -7,6 +7,6 @@
     <hr>
 
     <div class="row">
-        <iframe src="http://192.168.0.102:5000" style="width: 100%; height: 600px;" frameborder="0" allowfullscreen></iframe>
+        <iframe src="http://127.0.0.1:5000" style="width: 100%; height: 600px;" frameborder="0" allowfullscreen></iframe>
     </div>
 @endsection

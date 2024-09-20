@@ -21,7 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Bootstrap icons-->
     <link rel="stylesheet" href="{{url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css')}}">
-   
+
     <!-- jQuery -->
     <script src="{{ url('plugins/jquery/jquery.min.js') }}"></script>
 
@@ -189,11 +189,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="info">
-                        <a href="#" class="d-block"> 
+                        <a href="#" class="d-block">
                             Administrador</a>
                     </div>
                 </div>
-           
+
                 <!-- SidebarSearch Form -->
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
@@ -206,20 +206,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                     </div>
                 </div>
-               
-       
+
+
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-              
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas bi bi-info-circle"></i>
                                 <p>
-                                    Usuarios
+                                    Estudiantes
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -228,22 +228,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="{{ url('admin/users/createUser') }}" class="nav-link">
                                         <i class="nav-icon fas bi bi-person-plus-fill"></i>
-                                        <p>Crear usuario</p>
+                                        <p>Crear estudiante</p>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a href="{{ url('admin/users/usersIndex') }}" class="nav-link">
                                         <i class="nav-icon fas bi bi-card-list"></i>
-                                        <p>Listado de usuarios</p>
+                                        <p>Listado de estudiantes</p>
                                     </a>
                                 </li>
 
-                                
+
                             </ul>
                         </li>
-            
-                       
+
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -279,7 +279,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     </div>
     <!-- ./wrapper -->
-    
+
     <!-- REQUIRED SCRIPTS -->
 
     <!-- Bootstrap 4 -->
@@ -298,7 +298,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{url('plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
     <script src="{{url('plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
     <script src="{{url('plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
-    
+
     <!-- AdminLTE App -->
     <script src="{{ url('dist/js/adminlte.min.js') }}"></script>
 </body>

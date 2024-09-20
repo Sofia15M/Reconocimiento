@@ -35,16 +35,18 @@ class UserController extends Controller
 
         $request->validate([
             'name'=>'required|max:50',
-            'email'=>'required|max:50|unique:users,email,'.$user->id,
+            'diet' => 'required|min:8|max:40',
+            'grade' => 'required',
         ]);
 
         $user->name = $request->name;
-        $user->email = $request->email;
+        $user->grade = $request->grade;
+        $user->diet = $request->diet;
 
         $user->save();
 
         return redirect()->route('admin.users.usersIndex')
-        ->with('message_status', 'Usuario actualizado exitosamente')
+        ->with('message_status', 'Estudiante actualizado exitosamente')
         ->with('icon', 'success');
     }
 

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <h1>Modificar usuario: {{$user->name}}</h1>
+        <h1>Modificar estudiante: {{$user->name}}</h1>
     </div>
     <hr>
 
@@ -31,20 +31,42 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="">Correo</label><b>*</b>
-                                    <input type="email" value="{{$user->email}}" name="email" class="form-control" maxlength="50" required>
-                                    @error('email')
+                                    <label for="grade">Grado</label><b>*</b>
+                                    <select name="grade" class="form-control" required>
+                                        <option value="" disabled selected>Seleccione el grado</option>
+                                        <option value="Primero">Primero</option>
+                                        <option value="Segundo">Segundo</option>
+                                        <option value="Tercero">Tercero</option>
+                                        <option value="Cuarto">Cuarto</option>
+                                        <option value="Quinto">Quinto</option>
+                                    </select>
+                                    @error('grade')
                                     <small style="color:red">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
                         </div>
 
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Dieta</label><b>*</b>
+                                    <input type="text" value="{{old('diet')}}" name="diet" class="form-control" minlength="10" maxlength="40" pattern="[A-Za-z\s]+" title="Solo se permiten letras" required>
+                                    @error('diet')
+                                    <small style="color:red">{{$message}}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <a href="{{ url('admin/users/usersIndex') }}" class="btn btn-secondary">Cancelar</a>
-                                    <button type="submit" class="btn btn-success">Actualizar usuario</button>
+                                    <button type="submit" class="btn btn-success">Actualizar estudiante</button>
                                 </div>
                             </div>
                         </div>

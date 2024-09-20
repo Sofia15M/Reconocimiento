@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->integer('studentId')->unique();
+            $table->integer('age');
+            $table->string('grade');
+            $table->string('diet');
             $table->timestamps();
             $table->string('status')->default('activo');//The column's default value is "active"
         });
